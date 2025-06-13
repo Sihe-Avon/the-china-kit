@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China's Transit Visas: A Clear Guide to Layover Rules (2025)</title>
+    <title>A Vegetarian's Guide to Feasting in China: Survival & Strategy - The China Kit</title>
     
     <!-- Favicon -->
     <link rel="icon" href="../favicon/指南针.svg" type="image/svg+xml">
@@ -211,6 +211,37 @@
             scroll-behavior: smooth;
         }
         
+        /* 回到顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 4px 12px var(--primary-shadow);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px var(--primary-shadow-hover);
+        }
+
+
+        
         /* 面包屑导航 */
         .breadcrumb {
             display: flex;
@@ -235,38 +266,29 @@
             font-weight: 500;
         }
         
-        /* 页面标题 - 增强气场 */
+        /* 页面标题 */
         .page-title {
-            font-size: 3rem; /* 从2.5rem增加到3rem */
-            font-weight: 800; /* 从bold增加到extrabold */
+            font-size: 3rem;
+            font-weight: 800;
             color: #1f2937;
-            margin-bottom: 3rem; /* 从2rem增加到3rem，增加呼吸感 */
+            margin-bottom: 3rem;
             line-height: 1.1;
-            letter-spacing: -0.025em; /* 增加负字符间距，让标题更紧凑 */
+            letter-spacing: -0.025em;
         }
         
         /* 文章样式 */
         .article {
             background-color: white;
             border-radius: 0.5rem;
-            padding: 2.5rem; /* 从2rem增加到2.5rem */
+            padding: 2.5rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
-        .article h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1f2937;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        /* H2标题 - 增加呼吸感和统一分割线 */
         .article h2 {
             font-size: 1.5rem;
             font-weight: bold;
             color: #1f2937;
-            margin: 4rem 0 1.5rem 0; /* 增加上边距从2rem到4rem */
+            margin: 4rem 0 1.5rem 0;
             padding-bottom: 0.75rem;
             border-bottom: 2px solid #e5e7eb;
             position: relative;
@@ -286,90 +308,82 @@
             font-size: 1.25rem;
             font-weight: 600;
             color: #1f2937;
-            margin: 2rem 0 1rem 0; /* 增加上边距 */
+            margin: 2rem 0 1rem 0;
         }
         
         .article p {
             color: #4b5563;
-            margin-bottom: 1.25rem; /* 从1rem增加到1.25rem */
+            margin-bottom: 1.25rem;
             line-height: 1.7;
             font-size: 1rem;
         }
         
         .article ul, .article ol {
-            margin: 1.5rem 0; /* 增加列表上下间距 */
+            margin: 1.5rem 0;
             padding-left: 1.5rem;
         }
         
         .article li {
             color: #4b5563;
-            margin-bottom: 0.75rem; /* 增加列表项间距 */
+            margin-bottom: 0.75rem;
             line-height: 1.6;
         }
         
-        /* 优化信息框样式 - 更精致的设计 */
+        /* 信息框样式 */
         .info-box {
-            padding: 1.5rem; /* 增加内边距 */
-            border-radius: 0.75rem; /* 增加圆角 */
-            margin: 2rem 0; /* 增加外边距 */
-            border: 1px solid; /* 添加细边框 */
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 添加轻微阴影 */
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+            border: 1px solid;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .info-box.blue {
-            background-color: #f0f9ff; /* 更柔和的蓝色背景 */
-            border-color: #bae6fd; /* 蓝色细边框 */
+            background-color: #f0f9ff;
+            border-color: #bae6fd;
         }
         
         .info-box.yellow {
-            background-color: #fefce8; /* 更柔和的黄色背景 */
-            border-color: #fde047; /* 黄色细边框 */
+            background-color: #fefce8;
+            border-color: #fde047;
         }
         
         .info-box.green {
-            background-color: #f0fdf4; /* 保持绿色背景 */
-            border-color: #bbf7d0; /* 绿色细边框 */
-        }
-        
-        .info-box.red {
-            background-color: #fef2f2;
-            border-color: #fecaca; /* 红色细边框 */
+            background-color: #f0fdf4;
+            border-color: #bbf7d0;
         }
         
         .info-box h3 {
             font-weight: 600;
-            margin-bottom: 0.75rem; /* 增加标题下间距 */
+            margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
         }
         
-        .info-box.blue h3 { color: #0c4a6e; } /* 更深的蓝色 */
+        .info-box.blue h3 { color: #0c4a6e; }
         .info-box.yellow h3 { color: #92400e; }
         .info-box.green h3 { color: #166534; }
-        .info-box.red h3 { color: #991b1b; }
         
         .info-box p {
             font-size: 0.875rem;
-            margin-bottom: 0.75rem; /* 增加段落间距 */
+            margin-bottom: 0.75rem;
             line-height: 1.6;
         }
         
-        /* 优化清单样式 - 增强可读性 */
         .info-box ul {
             margin: 1rem 0;
-            padding-left: 0; /* 移除默认缩进 */
-            list-style: none; /* 移除默认列表样式 */
+            padding-left: 0;
+            list-style: none;
         }
         
         .info-box li {
             font-size: 0.875rem;
-            margin-bottom: 1rem; /* 显著增加列表项间距 */
-            padding: 0.75rem 0; /* 增加内边距 */
+            margin-bottom: 1rem;
+            padding: 0.75rem 0;
             line-height: 1.6;
             position: relative;
         }
         
-        /* 为绿色清单添加更好的视觉分离 */
         .info-box.green li {
             border-bottom: 1px solid #e5e7eb;
             padding-bottom: 1rem;
@@ -379,7 +393,6 @@
             border-bottom: none;
         }
         
-        /* 清单项标题加粗 */
         .info-box li strong {
             font-weight: 600;
             color: #1f2937;
@@ -390,14 +403,13 @@
         .info-box.blue p, .info-box.blue li { color: #0c4a6e; }
         .info-box.yellow p, .info-box.yellow li { color: #92400e; }
         .info-box.green p, .info-box.green li { color: #166534; }
-        .info-box.red p, .info-box.red li { color: #991b1b; }
         
         /* 页脚 */
         .footer {
             background-color: white;
             border-top: 1px solid #e5e7eb;
             padding: 3rem 1rem;
-            margin-top: 4rem; /* 增加页脚上边距 */
+            margin-top: 4rem;
         }
         
         .footer-container {
@@ -439,58 +451,58 @@
             margin-bottom: 0.75rem;
         }
         
-        /* 自定义滚动条样式 */
-        .sidebar::-webkit-scrollbar,
-        .content-area::-webkit-scrollbar {
-            width: 6px;
-        }
-        
-        .sidebar::-webkit-scrollbar-track,
-        .content-area::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        .sidebar::-webkit-scrollbar-thumb {
-            background: rgba(107, 114, 128, 0.3);
-            border-radius: 3px;
-            transition: background 0.2s ease;
-        }
-        
-        .sidebar::-webkit-scrollbar-thumb:hover {
-            background: rgba(107, 114, 128, 0.5);
-        }
-        
-        .content-area::-webkit-scrollbar-thumb {
-            background: rgba(31, 41, 55, 0.2);
-            border-radius: 3px;
-            transition: background 0.2s ease;
-        }
-        
-        .content-area::-webkit-scrollbar-thumb:hover {
-            background: rgba(31, 41, 55, 0.4);
-        }
-        
-        /* Firefox滚动条样式 */
-        .sidebar,
-        .content-area {
-            scrollbar-width: thin;
-            scrollbar-color: rgba(107, 114, 128, 0.3) transparent;
-        }
-
-        /* 移动端响应式 */
+        /* 移动端响应式 - 优化体验 */
         @media (max-width: 1024px) {
+            .main-layout {
+                flex-direction: column;
+            }
+            
             .sidebar {
-                display: none;
+                position: relative;
+                top: 0;
+                width: 100%;
+                height: auto;
+                max-height: 300px;
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+                padding: 1rem;
+            }
+            
+            .sidebar-section {
+                margin-bottom: 1rem;
+            }
+            
+            .sidebar-nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .sidebar-nav li {
+                margin-bottom: 0;
+            }
+            
+            .sidebar-nav a {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.8rem;
+                white-space: nowrap;
             }
             
             .nav-links {
                 display: none;
             }
+            
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 44px;
+                height: 44px;
+            }
         }
         
         @media (max-width: 768px) {
             .page-title {
-                font-size: 2.25rem; /* 移动端稍微缩小 */
+                font-size: 2.25rem;
                 margin-bottom: 2rem;
             }
             
@@ -503,7 +515,7 @@
             }
             
             .article h2 {
-                margin: 3rem 0 1rem 0; /* 移动端减少间距 */
+                margin: 3rem 0 1rem 0;
                 font-size: 1.25rem;
             }
             
@@ -511,35 +523,6 @@
                 padding: 1rem;
                 margin: 1.5rem 0;
             }
-        }
-
-        /* 回到顶部按钮 */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 1000;
-            box-shadow: 0 4px 12px var(--primary-shadow);
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px var(--primary-shadow-hover);
         }
     </style>
 </head>
@@ -551,10 +534,10 @@
                 <a href="../index.html" class="nav-brand">The China Kit</a>
             </div>
             <div class="nav-links">
-                <a href="#" class="nav-link">Visa Guides</a>
+                <a href="../visa/how-to-apply-for-a-tourist-visa.html" class="nav-link">Visa Guides</a>
                 <a href="../essentials/mobile-payments-guide.html" class="nav-link">Travel Essentials</a>
                 <a href="../city/china-itineraries.html" class="nav-link">City Guides</a>
-                <a href="../food/dianping.html" class="nav-link">Food Exploration</a>
+                <a href="#" class="nav-link">Food Exploration</a>
                 <a href="#" class="nav-link">About</a>
             </div>
         </div>
@@ -573,7 +556,7 @@
                 </div>
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="how-to-apply-for-a-tourist-visa.html">
+                        <a href="../visa/how-to-apply-for-a-tourist-visa.html">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 0.75rem;">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
                             </svg>
@@ -581,7 +564,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="business-visa-requirements.html">
+                        <a href="../visa/business-visa-requirements.html">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 0.75rem;">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6"></path>
                             </svg>
@@ -589,7 +572,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="transit-visa-guide.html" class="active">
+                        <a href="../visa/transit-visa-guide.html">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 0.75rem;">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                             </svg>
@@ -670,7 +653,7 @@
                 </div>
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="../food/dianping.html">
+                        <a href="dianping.html">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 0.75rem;">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                             </svg>
@@ -678,9 +661,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../food/vegetarian.html">
+                        <a href="vegetarian.html" class="active">
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 0.75rem;">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 718.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                             </svg>
                             <span>A vegetarian's guide to China</span>
                         </a>
@@ -697,126 +680,105 @@
                 <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-                <a href="#">Visa Navigator</a>
+                <a href="#">Food Exploration</a>
                 <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
-                <span class="current">Transit Visa Guide</span>
+                <span class="current">A Vegetarian's Guide to China</span>
             </nav>
 
             <!-- Page Title -->
-            <h1 class="page-title">China's Transit Visas: A Clear Guide to Layover Rules (2025)</h1>
+            <h1 class="page-title">A Vegetarian's Guide to Feasting in China: Survival & Strategy</h1>
 
             <!-- Article Content -->
             <article class="article">
                 <!-- Introduction -->
-                <p>
-                    Planning a trip that includes a layover in China? You might be able to leave the airport and explore without needing to apply for a visa in advance. China offers convenient Transit Without Visa (TWOV) policies for travelers from many countries.
-                </p>
-                
-                <p>
-                    This guide will explain how the 24-hour and 144-hour TWOV policies work, who is eligible, and what you need to do to enjoy a visa-free stopover.
-                </p>
+                <div style="margin-bottom: 3rem;">
+                    <p>Planning a trip to China but worried about navigating the food scene as a vegetarian? Relax! Eating vegetarian in China is not only possible, but it can also be an incredible and surprisingly delightful culinary adventure. From ancient temple cuisine to modern, creative plant-based restaurants, the country offers far more vegetarian-friendly options than you might expect.</p>
+                    
+                    <p>This guide will provide you with the ultimate survival phrases, a list of must-order dishes, and pro-tips on how to use modern tools to find hidden culinary gems.</p>
+                </div>
 
-                <!-- Important Disclaimer -->
+                <!-- Core Challenge -->
                 <div class="info-box blue">
-                    <h3>Important Disclaimer</h3>
-                    <p>
-                        Transit policies and their enforcement can be updated. This guide is based on information available as of June 2025. You must always confirm the specific requirements with your airline and the Chinese immigration authorities before you travel.
-                    </p>
+                    <h3>The Core Challenge</h3>
+                    <p>In China, the definition of "vegetarian" in a regular restaurant can differ from the Western concept. Some chefs may consider a dish "meat-free" as long as there are no large chunks of meat, but animal fats (especially lard), meat-based broth, or seasonings with minced meat might be used in the cooking process. Therefore, <strong>clear communication is essential</strong>.</p>
                 </div>
 
-                <!-- Part 1 -->
-                <h2>Part 1: Understanding Transit Without Visa (TWOV)</h2>
-                <p>
-                    The most important thing to know is that for a short layover, you likely do not need to apply for a Transit (G) Visa beforehand. Instead, you will use one of the TWOV policies upon arrival.
-                </p>
+                <!-- Chapter 1 -->
+                <h2>Chapter 1: The Golden Rule: Master These Magic Phrases</h2>
+                <p>These phrases are your most valuable tool for ordering food in China. Take a screenshot or save them in your translation app.</p>
                 
-                <p>
-                    There are two main types:
-                </p>
                 <ul>
-                    <li><strong>24-Hour TWOV:</strong> Available to citizens of almost all countries.</li>
-                    <li><strong>144-Hour TWOV:</strong> Available to citizens of 54 specific countries, including the U.S., Canada, the U.K., Australia, and most of the EU.</li>
+                    <li><strong>我吃素。</strong> (wǒ chī sù.) - I eat vegetarian. (The most direct phrase.)</li>
+                    <li><strong>我是素食者。</strong> (wǒ shì sù shí zhě.) - I am a vegetarian. (A more formal way to say it.)</li>
+                    <li><strong>请不要放任何肉，一点点肉末也不要。</strong> (qǐng bù yào fàng rèn hé ròu, yī diǎn diǎn ròu mò yě bù yào.) - Please do not add any meat, not even a little bit of minced meat. (A crucial follow-up!)</li>
+                    <li><strong>请不要用猪油炒菜。</strong> (qǐng bù yào yòng zhū yóu chǎo cài.) - Please do not use lard to cook.</li>
+                    <li><strong>这个是素的吗？</strong> (zhè ge shì sù de ma?) - Is this vegetarian?</li>
                 </ul>
-
-                <!-- Part 2 -->
-                <h2>Part 2: The Golden Rule for All Transit Policies</h2>
-                <p>
-                    To use any TWOV policy, you must be in transit to a third country or region.
-                </p>
-
-                <p>
-                    This means your itinerary must look like this:
-                </p>
-                <p>
-                    <strong>Country A → Mainland China → Country C</strong>
-                </p>
-                <ul>
-                    <li><strong>Correct Example:</strong> New York, USA → Shanghai, China → Tokyo, Japan</li>
-                    <li><strong>Incorrect Example:</strong> New York, USA → Shanghai, China → Los Angeles, USA (This is considered a round trip, not transit.)</li>
-                </ul>
-
-                <p>
-                    Hong Kong and Macau are considered separate regions, so itineraries like USA → Beijing → Hong Kong are valid for transit.
-                </p>
-
-                <!-- Part 3 -->
-                <h2>Part 3: The 24-Hour Visa-Free Transit</h2>
-                <p>
-                    This is the most flexible policy.
-                </p>
-                
-                <div class="info-box green">
-                    <h3>24-Hour TWOV Details</h3>
-                    <ul>
-                        <li><strong>Who is Eligible?</strong> Citizens of nearly all countries.</li>
-                        <li><strong>Where is it Available?</strong> At most major international airports in China.</li>
-                        <li><strong>Key Requirement:</strong> You must hold a confirmed ticket for a connecting international flight departing within 24 hours.</li>
-                        <li><strong>Can I leave the airport?</strong> If you wish to leave the transit area to explore, you must apply for a "Temporary Entry Permit" at the immigration counter upon arrival. Approval is at the discretion of the immigration officer.</li>
-                    </ul>
-                </div>
-
-                <!-- Part 4 -->
-                <h2>Part 4: The 144-Hour Visa-Free Transit (6 Days)</h2>
-                <p>
-                    This popular policy allows for a much longer and more in-depth visit.
-                </p>
-
-                <h3>Eligibility Checklist:</h3>
-                <div class="info-box green">
-                    <h3>144-Hour TWOV Requirements</h3>
-                    <ul>
-                        <li><strong>1. Are you a citizen of one of the 54 eligible countries?</strong><br>This list includes the United States, Canada, Brazil, Australia, New Zealand, Japan, South Korea, Singapore, and 25 Schengen Area countries, among others.</li>
-                        <li><strong>2. Are you entering and exiting through an approved port?</strong><br>This policy applies to dozens of specific airports and ports in major regions like Beijing-Tianjin-Hebei, Shanghai-Jiangsu-Zhejiang, and Guangdong. Popular airports include Beijing (PEK & PKX), Shanghai (PVG & SHA), and Guangzhou (CAN).</li>
-                        <li><strong>3. Do you have a confirmed ticket to a third country or region departing within 144 hours?</strong><br>You must present this ticket upon arrival. The 144-hour countdown begins at 00:01 on the day following your arrival.</li>
-                    </ul>
-                </div>
-
-                <h3>How to Use the 144-Hour Policy:</h3>
-                <ol>
-                    <li><strong>Inform Your Airline:</strong> When you check in for your flight to China, inform the airline staff that you plan to use the 144-hour TWOV.</li>
-                    <li><strong>Fill Out an Arrival Card:</strong> On the plane or at the airport, fill out the "Arrival/Departure Card."</li>
-                    <li><strong>Apply at the Correct Counter:</strong> Upon arrival in China, look for the dedicated "144-hour Transit" counter at immigration.</li>
-                    <li><strong>Submit Your Documents:</strong> Present your passport, your arrival card, and your confirmed onward ticket to the immigration officer.</li>
-                    <li><strong>Receive Your Permit:</strong> If approved, you will receive a temporary entry permit sticker in your passport, and you are free to enter the designated region for your stay.</li>
-                </ol>
 
                 <div class="info-box yellow">
-                    <h3>Pro-Tip</h3>
-                    <p>
-                        Your permitted area of stay is usually restricted to the province or region you arrived in. For example, if you arrive in Shanghai, you can travel freely within Shanghai, Jiangsu, and Zhejiang, but you cannot fly to Beijing. Always confirm your permitted area of activity upon arrival.
-                    </p>
+                    <h3>Pro-Tip for Vegans</h3>
+                    <p>If you are a strict vegan, use the phrase <strong>"我吃纯素 (wǒ chī chún sù)"</strong> and add, <strong>"不要鸡蛋和牛奶 (bù yào jī dàn hé niú nǎi)"</strong> (no eggs or dairy products).</p>
                 </div>
+
+                <!-- Chapter 2 -->
+                <h2>Chapter 2: Reliably Safe Dishes to Order</h2>
+                <p>Ordering the following dishes at almost any regular Chinese restaurant is usually a safe bet. Of course, it's always best to confirm with one of the "magic phrases" above when you order.</p>
+
+                <div class="info-box green">
+                    <h3>The Vegetarian Safe Menu</h3>
+                    <ul>
+                        <li><strong>Dì Sān Xiān (地三鲜):</strong> A classic dish from Northeast China, this "Three Treasures of the Earth" consists of perfectly stir-fried potatoes, eggplant, and green peppers. It's savory and filling.</li>
+                        <li><strong>Fān Qié Chǎo Dàn (番茄炒蛋):</strong> A beloved national dish of scrambled eggs and tomato. (Vegans should avoid this).</li>
+                        <li><strong>Suàn Róng Xī Lán Huā (蒜蓉西兰花):</strong> Stir-fried broccoli (or any other vegetable) with garlic. A simple, healthy, and reliably safe choice.</li>
+                        <li><strong>Jiā Cháng Dòufu (家常豆腐):</strong> Homestyle pan-fried tofu cooked with vegetables. A delicious way to get your protein. Make sure to request no minced meat.</li>
+                        <li><strong>Pāi Huáng Guā (拍黄瓜):</strong> A refreshing smashed cucumber salad, typically seasoned with garlic, vinegar, and soy sauce. A perfect appetizer.</li>
+                        <li><strong>Suān Là Tǔ Dòu Sī (酸辣土豆丝):</strong> Sour and spicy shredded potatoes. An incredibly common and delicious staple.</li>
+                        <li><strong>Sù Xiàn Jiǎo Zi / Bāo Zi (素馅饺子/包子):</strong> Many dumpling and bun shops offer fillings made purely with vegetables, mushrooms, or egg.</li>
+                        <li><strong>Dàn Chǎo Fàn (蛋炒饭):</strong> Egg fried rice. You can request it with only eggs and vegetables, and no ham or meat.</li>
+                    </ul>
+                </div>
+
+                <!-- Chapter 3 -->
+                <h2>Chapter 3: Where to Find Food?</h2>
+                
+                <h3>1. Buddhist Temple Restaurants</h3>
+                <p>This is your safest and most culturally enriching option. Almost every large Buddhist temple has an adjacent vegetarian restaurant serving exquisite and delicious <strong>"sù zhāi"</strong> (Buddhist vegetarian cuisine). The food here is 100% pure vegetarian.</p>
+
+                <h3>2. Dedicated Vegetarian Restaurants</h3>
+                <p>Modern vegetarian restaurants are becoming increasingly common in big cities.</p>
+                <ul>
+                    <li><strong>Use the Dianping App:</strong> In the search bar of the Dianping app, type <strong>"素食"</strong> (sù shí) or <strong>"素斋"</strong> (sù zhāi). The app will list all the dedicated vegetarian restaurants near you, complete with pictures and customer reviews.</li>
+                </ul>
+
+                <h3>3. Hot Pot Restaurants</h3>
+                <p>Hot pot is extremely vegetarian-friendly. You can choose a clear or mushroom broth (be sure to ask if it's a pure vegetable-based broth), and then order a wide array of fresh vegetables, tofu products, mushrooms, and noodles to cook yourself at the table.</p>
+
+                <!-- Chapter 4 -->
+                <h2>Chapter 4: Pro-Tips for Vegetarians</h2>
+                <ul>
+                    <li><strong>Embrace Technology:</strong> Keep a translation app handy, or prepare a small card with your dietary needs written in Chinese.</li>
+                    <li><strong>Look for the Characters:</strong> Keep an eye out for the characters <strong>"素"</strong> (sù) or the Buddhist <strong>"卍"</strong> symbol on restaurant signs or menus. These are good indicators of vegetarian-friendly food.</li>
+                    <li><strong>Explore Local Markets:</strong> Visiting a local wet market is a unique cultural experience in itself. You'll discover countless fresh, seasonal vegetables and fruits.</li>
+                    <li><strong>Enjoy Tofu in its Homeland:</strong> China is the birthplace of tofu. Explore the incredible variety of soy products available, such as firm tofu (豆腐), dried tofu (豆干), tofu skin (腐竹), and tofu sheets (豆皮). They are an excellent source of protein.</li>
+                </ul>
 
                 <!-- Conclusion -->
                 <h2>Conclusion</h2>
-                <p>
-                    China's Transit Without Visa policies are an excellent way to turn a long layover into a mini-vacation. By ensuring your itinerary is valid and you have the correct documents, you can enjoy a hassle-free entry and a bonus adventure on your journey.
-                </p>
+                <p>Traveling in China as a vegetarian is not a limitation; it's an invitation to discovery. It will push you to explore ingredients more deeply and to communicate more thoughtfully with local people. Armed with this guide and a spirit of adventure, get ready to enjoy a unique and unforgettable Chinese vegetarian feast!</p>
             </article>
         </main>
     </div>
+
+
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
@@ -824,7 +786,7 @@
             <div>
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="how-to-apply-for-a-tourist-visa.html">Tourist Visa Guide</a></li>
+                    <li><a href="../visa/how-to-apply-for-a-tourist-visa.html">Tourist Visa Guide</a></li>
                     <li><a href="../essentials/mobile-payments-guide.html">Mobile Payments</a></li>
                     <li><a href="../essentials/essential-apps.html">Essential Apps</a></li>
                 </ul>
@@ -832,7 +794,7 @@
             <div>
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="how-to-apply-for-a-tourist-visa.html">Visa Guides</a></li>
+                    <li><a href="../visa/how-to-apply-for-a-tourist-visa.html">Visa Guides</a></li>
                     <li><a href="../essentials/mobile-payments-guide.html">Travel Essentials</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
@@ -848,13 +810,6 @@
             <p>&copy; 2025 The China Kit. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- 回到顶部按钮 -->
-    <button class="back-to-top" id="backToTop" aria-label="回到顶部">
-        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
-    </button>
 
     <!-- JavaScript for enhanced UX -->
     <script>
@@ -878,6 +833,8 @@
             });
         });
 
+
+        
         // 侧边栏导航增强
         document.addEventListener('DOMContentLoaded', () => {
             const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
@@ -908,6 +865,45 @@
                 });
             });
         });
+        
+        // 优化移动端侧边栏体验
+        if (window.innerWidth <= 1024) {
+            const sidebar = document.querySelector('.sidebar');
+            let isCollapsed = false;
+            
+            // 添加折叠/展开功能（可选）
+            const toggleButton = document.createElement('button');
+            toggleButton.innerHTML = '☰ 导航菜单';
+            toggleButton.className = 'sidebar-toggle';
+            toggleButton.style.cssText = `
+                display: block;
+                width: 100%;
+                padding: 0.75rem;
+                background: #f3f4f6;
+                border: none;
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: #374151;
+                cursor: pointer;
+                transition: all 0.2s;
+            `;
+            
+            // 在移动端添加切换按钮
+            if (sidebar && window.innerWidth <= 768) {
+                sidebar.insertBefore(toggleButton, sidebar.firstChild);
+                
+                toggleButton.addEventListener('click', () => {
+                    isCollapsed = !isCollapsed;
+                    const sections = sidebar.querySelectorAll('.sidebar-section');
+                    sections.forEach(section => {
+                        section.style.display = isCollapsed ? 'none' : 'block';
+                    });
+                    toggleButton.innerHTML = isCollapsed ? '☰ 展开导航' : '☰ 收起导航';
+                });
+            }
+        }
     </script>
 </body>
 </html>
