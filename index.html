@@ -25,19 +25,24 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5460062622362374" crossorigin="anonymous"></script>
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'gitbook-blue': '#1f2937',
-                        'gitbook-gray': '#6b7280',
-                        'gitbook-light': '#f9fafb'
+        // 确保在 DOMContentLoaded 后配置 Tailwind
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof tailwind !== 'undefined') {
+                tailwind.config = {
+                    theme: {
+                        extend: {
+                            colors: {
+                                'gitbook-blue': '#1f2937',
+                                'gitbook-gray': '#6b7280',
+                                'gitbook-light': '#f9fafb'
+                            }
+                        }
                     }
                 }
             }
-        }
+        });
     </script>
     
     <!-- Custom Styles -->
@@ -48,6 +53,20 @@
             --gitbook-light: #f9fafb;
         }
         
+        /* 基础样式 */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 自定义颜色类 */
         .text-gitbook-blue { color: var(--gitbook-blue) !important; }
         .text-gitbook-gray { color: var(--gitbook-gray) !important; }
         .bg-gitbook-blue { background-color: var(--gitbook-blue) !important; }
@@ -62,24 +81,92 @@
         svg { 
             display: inline-block; 
             vertical-align: middle;
+            width: 1em;
+            height: 1em;
         }
         
-        /* 确保按钮样式正确 */
+        /* 按钮样式 */
         .btn-primary {
             background-color: var(--gitbook-blue) !important;
             color: white !important;
             border: 2px solid var(--gitbook-blue) !important;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #374151 !important;
+            border-color: #374151 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(31, 41, 55, 0.3);
         }
         
         .btn-secondary {
             background-color: transparent !important;
             color: var(--gitbook-blue) !important;
             border: 2px solid var(--gitbook-blue) !important;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
         }
         
         .btn-secondary:hover {
             background-color: var(--gitbook-blue) !important;
             color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(31, 41, 55, 0.3);
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+        }
+        
+        /* 错误处理 */
+        .error-fallback {
+            display: none;
+        }
+        
+        /* 当 Tailwind 加载失败时的备用样式 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-section {
+            background-color: var(--gitbook-light);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--gitbook-blue);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .hero-text {
+            font-size: 1.25rem;
+            color: var(--gitbook-gray);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -342,6 +429,25 @@
             </div>
         </div>
     </footer>
+
+    <!-- Error Handling -->
+    <script>
+        // 防止 JWT 错误
+        window.addEventListener('error', function(e) {
+            if (e.message && e.message.includes('JWT')) {
+                e.preventDefault();
+                console.log('JWT error prevented');
+            }
+        });
+        
+        // 防止 Promise 错误
+        window.addEventListener('unhandledrejection', function(e) {
+            if (e.reason && e.reason.message && e.reason.message.includes('JWT')) {
+                e.preventDefault();
+                console.log('JWT promise error prevented');
+            }
+        });
+    </script>
 
     <!-- Mobile Menu JavaScript -->
     <script>
