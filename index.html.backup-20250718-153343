@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJF585HFT3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YJF585HFT3');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The China Kit: Your Ultimate 2025 Guide to Modern China</title>
+    <meta name="description" content="Your definitive 2025 guide to China. We simplify the essentials like visas and payments, and unlock authentic experiences with city guides, food recommendations, and cultural insights. Travel with confidence.">
+    <meta name="google-adsense-account" content="ca-pub-5460062622362374">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon/指南针.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon/指南针.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon/指南针.png">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5460062622362374"
+         crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.0"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gitbook-blue': '#1f2937',
+                        'gitbook-gray': '#6b7280',
+                        'gitbook-light': '#f9fafb'
+                    }
+                }
+            },
+            corePlugins: {
+                preflight: true,
+            }
+        }
+    </script>
+    <style>
+        /* 确保自定义颜色正确应用 */
+        .text-gitbook-blue { color: #1f2937 !important; }
+        .text-gitbook-gray { color: #6b7280 !important; }
+        .bg-gitbook-blue { background-color: #1f2937 !important; }
+        .bg-gitbook-light { background-color: #f9fafb !important; }
+        .border-gitbook-blue { border-color: #1f2937 !important; }
+        .hover\:bg-gitbook-blue:hover { background-color: #1f2937 !important; }
+        .hover\:text-gitbook-blue:hover { color: #1f2937 !important; }
+        .hover\:bg-gitbook-light:hover { background-color: #f9fafb !important; }
+        .after\:bg-gitbook-blue::after { background-color: #1f2937 !important; }
+        
+        /* 确保SVG图标正确显示 */
+        svg { display: inline-block; }
+        .group:hover svg { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans leading-relaxed">
+    <!-- Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/95 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-semibold text-gitbook-blue transition-colors duration-200 hover:text-gray-600 cursor-pointer">The China Kit</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="visa/how-to-apply-for-a-tourist-visa.html" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full text-sm font-medium">Visa Guides</a>
+                    <a href="essentials/mobile-payments-guide.html" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full text-sm font-medium">Travel Essentials</a>
+                    <a href="city/china-itineraries.html" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full text-sm font-medium">City Guides</a>
+                    <a href="food/dianping.html" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full text-sm font-medium">Food Exploration</a>
+                    <a href="transportation/high-speed-trains.html" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full text-sm font-medium">Transportation</a>
+                    <a href="cultural/tipping.html" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full text-sm font-medium">Cultural Insights</a>
+                    <a href="#" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full text-sm font-medium">About</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" type="button" class="text-gitbook-gray hover:text-gitbook-blue focus:outline-none focus:text-gitbook-blue transition-colors duration-200" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg id="menu-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close icon -->
+                        <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                    <a href="visa/how-to-apply-for-a-tourist-visa.html" class="block px-3 py-2 text-gitbook-gray hover:text-gitbook-blue hover:bg-gitbook-light transition-colors duration-200 rounded-md text-base font-medium">Visa Guides</a>
+                    <a href="essentials/mobile-payments-guide.html" class="block px-3 py-2 text-gitbook-gray hover:text-gitbook-blue hover:bg-gitbook-light transition-colors duration-200 rounded-md text-base font-medium">Travel Essentials</a>
+                    <a href="city/china-itineraries.html" class="block px-3 py-2 text-gitbook-gray hover:text-gitbook-blue hover:bg-gitbook-light transition-colors duration-200 rounded-md text-base font-medium">City Guides</a>
+                    <a href="food/dianping.html" class="block px-3 py-2 text-gitbook-gray hover:text-gitbook-blue hover:bg-gitbook-light transition-colors duration-200 rounded-md text-base font-medium">Food Exploration</a>
+                    <a href="transportation/high-speed-trains.html" class="block px-3 py-2 text-gitbook-gray hover:text-gitbook-blue hover:bg-gitbook-light transition-colors duration-200 rounded-md text-base font-medium">Transportation Guide</a>
+                    <a href="cultural/tipping.html" class="block px-3 py-2 text-gitbook-gray hover:text-gitbook-blue hover:bg-gitbook-light transition-colors duration-200 rounded-md text-base font-medium">Cultural Insights</a>
+                    <a href="#" class="block px-3 py-2 text-gitbook-gray hover:text-gitbook-blue hover:bg-gitbook-light transition-colors duration-200 rounded-md text-base font-medium">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gitbook-light py-20 px-4 sm:px-6 lg:px-8 transition-all duration-300">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gitbook-blue mb-6 leading-tight">
+                Beyond the Great Wall.
+            </h1>
+            <p class="text-lg md:text-xl text-gitbook-gray mb-10 max-w-3xl mx-auto leading-relaxed">
+                The China Kit is your definitive 2025 guide to not just visiting, but truly understanding modern China—from seamless travel prep to deep dives into its cities, food, and culture.
+            </p>
+            <a href="visa/how-to-apply-for-a-tourist-visa.html" class="inline-block bg-gitbook-blue text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-800 transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gitbook-blue focus:ring-offset-2 shadow-lg hover:shadow-xl text-decoration-none">
+                Explore All Guides
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Guides Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-gitbook-blue mb-12 text-center">Start Here</h2>
+            <div class="space-y-6">
+                <a href="visa/how-to-apply-for-a-tourist-visa.html" class="block">
+                    <div class="border-l-4 border-gitbook-blue pl-6 py-4 hover:bg-gitbook-light transition-all duration-200 cursor-pointer rounded-r-xl group">
+                        <h3 class="text-xl font-semibold text-gitbook-blue mb-2 group-hover:text-gray-800 transition-colors duration-200">How to Apply for a Tourist Visa</h3>
+                        <p class="text-gitbook-gray group-hover:text-gray-600 transition-colors duration-200">Step-by-step guide to securing your Chinese tourist visa, including required documents and processing times.</p>
+                    </div>
+                </a>
+                <a href="essentials/mobile-payments-guide.html" class="block">
+                    <div class="border-l-4 border-gitbook-blue pl-6 py-4 hover:bg-gitbook-light transition-all duration-200 cursor-pointer rounded-r-xl group">
+                        <h3 class="text-xl font-semibold text-gitbook-blue mb-2 group-hover:text-gray-800 transition-colors duration-200">A Foreigner's Guide to Mobile Payments</h3>
+                        <p class="text-gitbook-gray group-hover:text-gray-600 transition-colors duration-200">Master WeChat Pay and Alipay to navigate China's cashless society with confidence.</p>
+                    </div>
+                </a>
+                <a href="essentials/essential-apps.html" class="block">
+                    <div class="border-l-4 border-gitbook-blue pl-6 py-4 hover:bg-gitbook-light transition-all duration-200 cursor-pointer rounded-r-xl group">
+                        <h3 class="text-xl font-semibold text-gitbook-blue mb-2 group-hover:text-gray-800 transition-colors duration-200">Essential Apps for Travelers in China</h3>
+                        <p class="text-gitbook-gray group-hover:text-gray-600 transition-colors duration-200">Download these must-have apps before you arrive to communicate, navigate, and explore like a local.</p>
+                    </div>
+                </a>
+                <a href="essentials/guide-of-buying-sim-cards.html" class="block">
+                    <div class="border-l-4 border-gitbook-blue pl-6 py-4 hover:bg-gitbook-light transition-all duration-200 cursor-pointer rounded-r-xl group">
+                        <h3 class="text-xl font-semibold text-gitbook-blue mb-2 group-hover:text-gray-800 transition-colors duration-200">Getting Connected: SIM Card Guide for Foreign Travelers</h3>
+                        <p class="text-gitbook-gray group-hover:text-gray-600 transition-colors duration-200">Step-by-step guide to purchasing a Chinese SIM card with your passport and staying connected throughout your trip.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse by Category Section -->
+    <section class="bg-gitbook-light py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Visa Navigator -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gitbook-blue rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <svg class="w-7 h-7 text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3.586a1 1 0 01.707 1.707L13.414 16.586a1 1 0 01-.707.293H9m6-6V4a1 1 0 00-1-1H8a1 1 0 00-1 1v5m8 0h-2m-6 0v7a1 1 0 001 1h6a1 1 0 001-1v-7m-6 0H4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gitbook-blue group-hover:text-gray-800 transition-colors duration-200">Visa Navigator</h3>
+                    </div>
+                    <p class="text-gitbook-gray mb-6 leading-relaxed group-hover:text-gray-600 transition-colors duration-200">
+                        Complete visa information for all types of travelers, from tourist visas to business permits.
+                    </p>
+                    <a href="visa/how-to-apply-for-a-tourist-visa.html" class="block w-full border-2 border-gitbook-blue text-gitbook-blue bg-transparent py-3 px-6 rounded-xl font-semibold text-center hover:bg-gitbook-blue hover:text-white hover:border-gitbook-blue transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gitbook-blue focus:ring-offset-2 shadow-sm hover:shadow-md">
+                        Start Here
+                    </a>
+                </div>
+
+                <!-- Essential Travel Kit -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gitbook-blue rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <svg class="w-7 h-7 text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gitbook-blue group-hover:text-gray-800 transition-colors duration-200">Essential Travel Kit</h3>
+                    </div>
+                    <p class="text-gitbook-gray mb-6 leading-relaxed group-hover:text-gray-600 transition-colors duration-200">
+                        Practical guides for payments, apps, communication, and daily life essentials in China.
+                    </p>
+                    <a href="essentials/mobile-payments-guide.html" class="block w-full border-2 border-gitbook-blue text-gitbook-blue bg-transparent py-3 px-6 rounded-xl font-semibold text-center hover:bg-gitbook-blue hover:text-white hover:border-gitbook-blue transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gitbook-blue focus:ring-offset-2 shadow-sm hover:shadow-md">
+                        Get Prepared
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Second Row of Cards -->
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <!-- City Guides -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gitbook-blue rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <svg class="w-7 h-7 text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gitbook-blue group-hover:text-gray-800 transition-colors duration-200">City Guides</h3>
+                    </div>
+                    <p class="text-gitbook-gray mb-6 leading-relaxed group-hover:text-gray-600 transition-colors duration-200">
+                        In-depth exploration of China's major cities, from hidden gems to must-see attractions and local insights.
+                    </p>
+                    <a href="city/china-itineraries.html" class="block w-full border-2 border-gitbook-blue text-gitbook-blue bg-transparent py-3 px-6 rounded-xl font-semibold text-center hover:bg-gitbook-blue hover:text-white hover:border-gitbook-blue transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gitbook-blue focus:ring-offset-2 shadow-sm hover:shadow-md">
+                        Explore Cities
+                    </a>
+                </div>
+
+                <!-- Food Exploration -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gitbook-blue rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <svg class="w-7 h-7 text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gitbook-blue group-hover:text-gray-800 transition-colors duration-200">Food Exploration</h3>
+                    </div>
+                    <p class="text-gitbook-gray mb-6 leading-relaxed group-hover:text-gray-600 transition-colors duration-200">
+                        Discover authentic Chinese cuisine beyond the tourist traps, from street food to regional specialties.
+                    </p>
+                    <a href="food/dianping.html" class="block w-full border-2 border-gitbook-blue text-gitbook-blue bg-transparent py-3 px-6 rounded-xl font-semibold text-center hover:bg-gitbook-blue hover:text-white hover:border-gitbook-blue transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gitbook-blue focus:ring-offset-2 shadow-sm hover:shadow-md">
+                        Taste China
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Third Row of Cards -->
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <!-- Transportation Guide -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gitbook-blue rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <svg class="w-7 h-7 text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gitbook-blue group-hover:text-gray-800 transition-colors duration-200">Transportation Guide</h3>
+                    </div>
+                    <p class="text-gitbook-gray mb-6 leading-relaxed group-hover:text-gray-600 transition-colors duration-200">
+                        Navigate China's extensive transportation network with confidence, from high-speed trains to urban metro systems and ride-sharing apps.
+                    </p>
+                    <a href="transportation/high-speed-trains.html" class="block w-full border-2 border-gitbook-blue text-gitbook-blue bg-transparent py-3 px-6 rounded-xl font-semibold text-center hover:bg-gitbook-blue hover:text-white hover:border-gitbook-blue transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gitbook-blue focus:ring-offset-2 shadow-sm hover:shadow-md">
+                        Get Moving
+                    </a>
+                </div>
+
+                <!-- Cultural Insights -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gitbook-blue rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                            <svg class="w-7 h-7 text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gitbook-blue group-hover:text-gray-800 transition-colors duration-200">Cultural Insights</h3>
+                    </div>
+                    <p class="text-gitbook-gray mb-6 leading-relaxed group-hover:text-gray-600 transition-colors duration-200">
+                        Understand Chinese customs, etiquette, and social norms to connect authentically with locals and navigate cultural nuances with respect.
+                    </p>
+                    <a href="cultural/tipping.html" class="block w-full border-2 border-gitbook-blue text-gitbook-blue bg-transparent py-3 px-6 rounded-xl font-semibold text-center hover:bg-gitbook-blue hover:text-white hover:border-gitbook-blue transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gitbook-blue focus:ring-offset-2 shadow-sm hover:shadow-md">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12 px-4 sm:px-6 lg:px-8 transition-all duration-300">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="font-semibold text-gitbook-blue mb-4 transition-colors duration-200">Quick Links</h4>
+                    <ul class="space-y-2 text-gitbook-gray">
+                        <li><a href="visa/how-to-apply-for-a-tourist-visa.html" class="hover:text-gitbook-blue transition-colors duration-200 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full">Tourist Visa Guide</a></li>
+                        <li><a href="essentials/mobile-payments-guide.html" class="hover:text-gitbook-blue transition-colors duration-200 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full">Mobile Payments</a></li>
+                        <li><a href="transportation/high-speed-trains.html" class="hover:text-gitbook-blue transition-colors duration-200 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full">High-Speed Rail Guide</a></li>
+                        <li><a href="cultural/tipping.html" class="hover:text-gitbook-blue transition-colors duration-200 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full">Tipping in China</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gitbook-blue mb-4 transition-colors duration-200">Resources</h4>
+                    <ul class="space-y-2 text-gitbook-gray">
+                        <li><a href="city/china-itineraries.html" class="text-gitbook-gray hover:text-gitbook-blue transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full">City Guides</a></li>
+                        <li><a href="food/dianping.html" class="hover:text-gitbook-blue transition-colors duration-200 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full">Food Exploration</a></li>
+                        <li><a href="cultural/tipping.html" class="hover:text-gitbook-blue transition-colors duration-200 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gitbook-blue after:transition-all after:duration-200 hover:after:w-full">Cultural Insights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gitbook-blue mb-4 transition-colors duration-200">About</h4>
+                    <p class="text-gitbook-gray text-sm leading-relaxed mb-3 transition-colors duration-200">
+                        Your definitive guide to understanding and experiencing modern China, from essential travel prep to authentic cultural insights.
+                    </p>
+                    <p class="text-xs text-gitbook-gray transition-colors duration-200">
+                        <strong>Last updated:</strong> June 2025
+                    </p>
+                    <p class="text-xs text-gitbook-gray mt-2 transition-colors duration-200">
+                        <strong>Disclaimer:</strong> Information provided is for general guidance only and does not constitute legal advice. Please verify all details with official sources.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gitbook-gray text-sm transition-all duration-300">
+                <p>&copy; 2025 The China Kit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            mobileMenuButton.addEventListener('click', function() {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                
+                // Toggle menu visibility
+                if (isExpanded) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuIcon.classList.remove('hidden');
+                    menuIcon.classList.add('block');
+                    closeIcon.classList.remove('block');
+                    closeIcon.classList.add('hidden');
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                    menuIcon.classList.remove('block');
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    closeIcon.classList.add('block');
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = mobileMenuButton.contains(event.target) || mobileMenu.contains(event.target);
+                
+                if (!isClickInsideNav && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuIcon.classList.remove('hidden');
+                    menuIcon.classList.add('block');
+                    closeIcon.classList.remove('block');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+
+            // Close mobile menu when window is resized to desktop size
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 1024) { // lg breakpoint
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    menuIcon.classList.remove('hidden');
+                    menuIcon.classList.add('block');
+                    closeIcon.classList.remove('block');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
